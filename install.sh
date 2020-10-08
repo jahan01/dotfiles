@@ -156,6 +156,8 @@ while getopts "fzs:i:m:" o; do
     esac
 done
 
+echo "before"
+printenv
 # allow vscode remote containers to force install as passing options to install script is not supported yet
 # VSCODE_REMOTE_CONTAINERS_SESSION: available only during first time container startup
 # LOGNAME: Available only after container has started
@@ -174,3 +176,6 @@ if [ ! -z "$VSCODE_REMOTE_CONTAINERS_SESSION" ] || [ "$LOGNAME" = "vscode" ]; th
 fi
 
 run
+
+echo "after"
+printenv
