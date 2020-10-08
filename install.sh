@@ -173,4 +173,13 @@ if [ ! -z "$VSCODE_REMOTE_CONTAINERS_SESSION" ] || [ "$LOGNAME" = "vscode" ]; th
     fi
 fi
 
+if [ "$CODESPACES" = "true" ]; then
+    echo "Codespace Detected: Forcing links and installing plugins"
+    FORCE_LINK=1
+    INSTALL_ZSH_PLUGINS=1
+    SYSTEM_ID=codespaces
+    IGNORE_FILES=".gitconfig"
+    COPY_FILES=1
+fi
+
 run
