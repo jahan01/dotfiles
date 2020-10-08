@@ -1,0 +1,19 @@
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = code --wait
+[user]
+	name =
+	email =
+[alias]
+	l = log --pretty=format:'%C(auto)%h %s %Cgreen(%cd) %C(bold blue)<%an> %C(auto)%d%C(reset)' -n 10 --date=relative
+[pager]
+	log = false
+	branch = false
+# [oh-my-zsh]
+# 	hide-status = 1
+# 	hide-dirty = 1
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

@@ -1,0 +1,5 @@
+ssl_verify: true
+channels:
+  - defaults
+auto_activate_base: false
+show_channel_urls: true
