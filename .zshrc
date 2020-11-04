@@ -3,6 +3,10 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 DISABLE_MAGIC_FUNCTIONS=true
 
 # Path to your oh-my-zsh installation.
@@ -33,7 +37,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
+DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
@@ -134,25 +138,25 @@ ZSH_AUTOSUGGEST_MANUAL_REBIND=true
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$(${ANACONDA_PATH}/bin/conda 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
+# __conda_setup="$(${ANACONDA_PATH}/bin/conda 'shell.zsh' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+    # eval "$__conda_setup"
+# else
     if [ -f "${ANACONDA_PATH}/etc/profile.d/conda.sh" ]; then
         . "${ANACONDA_PATH}/etc/profile.d/conda.sh"
     else
         export PATH="${ANACONDA_PATH}/bin:$PATH"
     fi
-fi
-unset __conda_setup
+# fi
+# unset __conda_setup
 # <<< conda initialize <<<
 
-autoload -Uz compinit && compinit
+# autoload -Uz compinit && compinit
 
 autoload -U bashcompinit && bashcompinit
-if type "register-python-argcomplete" > /dev/null; then
-    eval "$(register-python-argcomplete pipx)"
-fi
+# if type "register-python-argcomplete" > /dev/null; then
+#     eval "$(register-python-argcomplete pipx)"
+# fi
 
 # zprof
 

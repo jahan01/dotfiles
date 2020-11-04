@@ -81,7 +81,7 @@ backup() {
 
 install_zsh_plugins() {
     echo "Installing ZSH Plugins ..."
-    OMZ=${ZSH_CUSTOM:-~/.oh-my-zsh/custom}
+    OMZ=${ZSH_CUSTOM:-${HOME}/.oh-my-zsh/custom}
     [ ! -d "$OMZ" ] && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
     [ ! -d "$OMZ/plugins/zsh-autosuggestions" ] && git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions ${OMZ}/plugins/zsh-autosuggestions
     [ ! -d "$OMZ/themes/powerlevel10k" ] && git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${OMZ}/themes/powerlevel10k
@@ -172,6 +172,7 @@ if [ ! -z "$VSCODE_REMOTE_CONTAINERS_SESSION" ] || [ "$LOGNAME" = "vscode" ]; th
         COPY_FILES=1
     fi
 fi
+
 
 if [ "$CODESPACES" = "true" ]; then
     echo "Codespace Detected: Forcing links and installing plugins"
