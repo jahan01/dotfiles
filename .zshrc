@@ -166,7 +166,7 @@ if [[ -r "/usr/local/etc/bash_completion.d/cf-cli" ]]; then . "/usr/local/etc/ba
 
 function prompt_remote_container() {
     if [ "$MY_SYSTEM_ID" = "remote-container" ]; then
-        p10k segment -f 229 -b 196 -t $MY_SYSTEM_ID
+        p10k segment -f 225 -b 240 -t $MY_SYSTEM_ID
     fi
 }
 
