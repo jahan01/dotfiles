@@ -1,7 +1,10 @@
 #!/bin/sh
 
-BASE_DIR=$(dirname "$0")
+
+BASE_DIR="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 BKP_DIR=$BASE_DIR/bkp
+echo "Input command: $0 $@"
+echo "Pwd: $(pwd)"
 echo "Dotfiles dir: $BASE_DIR"
 echo "Backip dir: $BKP_DIR"
 
