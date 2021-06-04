@@ -115,7 +115,7 @@ export LANG=en_US.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context ssh root_indicator dir remote_container status)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context ssh root_indicator dir remote_container status)
 # POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vcs anaconda battery command_execution_time ram time)
 # POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(anaconda vcs status command_execution_time)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time virtualenv anaconda vcs)
